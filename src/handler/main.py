@@ -4,8 +4,6 @@ from src.components.main import text, image
 
 
 def handle_event(event):
-    import pdb;
-    pdb.set_trace()
     if 'message' in event:
         print("message event")
         if 'text' in event['message']:
