@@ -8,6 +8,7 @@ hook_route = Blueprint('hook_route', __name__)
 
 @hook_route.route("/webhook", methods=['GET', 'POST'])
 def hook():
+    import pdb;pdb.set_trace()
     if request.method == "GET":
         if request.args.get('hub.verify_token', '') == os.environ.get("VERIFY_TOKEN"):
             print("Verification successful!")
